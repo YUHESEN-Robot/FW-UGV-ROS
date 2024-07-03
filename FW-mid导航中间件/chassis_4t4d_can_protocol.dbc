@@ -1,0 +1,261 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: vcu upper_computer
+VAL_TABLE_ enable_data 1 "enable" 0 "disable" ;
+
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ steering_ctrl_fb_slipangle : 0|16@1- (0.01,0) [-327.68|327.67] "°" Vector__XXX
+ SG_ steering_ctrl_cmd_slipangle : 0|16@1- (0.01,0) [-327.68|327.67] "°" Vector__XXX
+
+BO_ 2563041775 rear_ultrasonic_fb: 8 vcu
+ SG_ rear_ultrasonic_fb_check_bcc : 56|8@1+ (1,0) [0|255] ""  upper_computer
+ SG_ rear_ultrasonic_fb_alive_cnt : 52|4@1+ (1,0) [0|15] ""  upper_computer
+ SG_ rear_ultrasonic_fb_8 : 36|12@1+ (1,0) [0|2560] "mm"  upper_computer
+ SG_ rear_ultrasonic_fb_7 : 24|12@1+ (1,0) [0|2560] "mm"  upper_computer
+ SG_ rear_ultrasonic_fb_6 : 12|12@1+ (1,0) [0|2560] "mm"  upper_computer
+ SG_ rear_ultrasonic_fb_5 : 0|12@1+ (1,0) [0|2560] "mm"  upper_computer
+
+BO_ 2563041519 front_ultrasonic_fb: 8 vcu
+ SG_ front_ultrasonic_fb_check_bcc : 56|8@1+ (1,0) [0|255] ""  upper_computer
+ SG_ front_ultrasonic_fb_alive_cnt : 52|4@1+ (1,0) [0|15] ""  upper_computer
+ SG_ front_ultrasonic_fb_4 : 36|12@1+ (1,0) [0|2560] "mm"  upper_computer
+ SG_ front_ultrasonic_fb_3 : 24|12@1+ (1,0) [0|2560] "mm"  upper_computer
+ SG_ front_ultrasonic_fb_2 : 12|12@1+ (1,0) [0|2560] "mm"  upper_computer
+ SG_ front_ultrasonic_fb_1 : 0|12@1+ (1,0) [0|2560] "mm"  upper_computer
+
+BO_ 2563042031 error_fb: 8 vcu
+ SG_ error_fb_check_bcc : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ error_fb_alive_cnt : 52|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ error_fb_code : 24|24@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ error_fb_device_id : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ error_fb_device_type : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ error_fb_level : 0|8@1+ (1,0) [0|255] ""  upper_computer
+
+BO_ 2566914046 clear_heartbeat: 8 upper_computer
+ SG_ clear_heartbeat : 0|64@1- (1,0) [-9.22337203685478E+018|9.22337203685478E+018] ""  vcu
+
+BO_ 2563036880 rear_angle_free_ctrl_cmd: 8 upper_computer
+ SG_ r_w_ctrl_cmd_gear : 0|4@1+ (1,0) [0|15] ""  vcu
+ SG_ r_w_ctrl_fb_check_bcc : 56|8@1+ (1,0) [0|255] ""  vcu
+ SG_ r_w_ctrl_fb_alive_cnt : 52|4@1+ (1,0) [0|15] ""  vcu
+ SG_ free_ctrl_cmd_angle_rr : 20|16@1- (0.01,0) [-327.68|327.67] "°"  vcu
+ SG_ free_ctrl_cmd_angle_lr : 4|16@1- (0.01,0) [-327.68|327.67] "°"  vcu
+
+BO_ 2563036624 front_angle_free_ctrl_cmd: 8 upper_computer
+ SG_ f_w_ctrl_cmd_gear : 0|4@1+ (1,0) [0|15] ""  vcu
+ SG_ f_w_ctrl_fb_check_bcc : 56|8@1+ (1,0) [0|255] ""  vcu
+ SG_ f_w_ctrl_fb_alive_cnt : 52|4@1+ (1,0) [0|15] ""  vcu
+ SG_ free_ctrl_cmd_angle_rf : 20|16@1- (0.01,0) [-327.68|327.67] "°"  vcu
+ SG_ free_ctrl_cmd_angle_lf : 4|16@1- (0.01,0) [-327.68|327.67] "°"  vcu
+
+BO_ 2563036368 rear_velocity_free_ctrl_cmd: 8 upper_computer
+ SG_ r_v_ctrl_cmd_gear : 0|4@1+ (1,0) [0|15] ""  vcu
+ SG_ r_v_ctrl_fb_check_bcc : 56|8@1+ (1,0) [0|255] ""  vcu
+ SG_ r_v_ctrl_fb_alive_cnt : 52|4@1+ (1,0) [0|15] ""  vcu
+ SG_ free_ctrl_cmd_velocity_rr : 20|16@1- (0.001,0) [-32.768|32.767] "m/s"  vcu
+ SG_ free_ctrl_cmd_velocity_lr : 4|16@1- (0.001,0) [-32.768|32.767] "m/s"  vcu
+
+BO_ 2563036112 front_velocity_free_ctrl_cmd: 8 upper_computer
+ SG_ f_v_ctrl_cmd_gear : 0|4@1+ (1,0) [0|15] ""  vcu
+ SG_ f_v_ctrl_fb_check_bcc : 56|8@1+ (1,0) [0|255] ""  vcu
+ SG_ f_v_ctrl_cmd_alive_cnt : 52|4@1+ (1,0) [0|15] ""  vcu
+ SG_ free_ctrl_cmd_velocity_rf : 20|16@1- (0.001,0) [-32.768|32.767] "m/s"  vcu
+ SG_ free_ctrl_cmd_velocity_lf : 4|16@1- (0.001,0) [-32.768|32.767] "m/s"  vcu
+
+BO_ 2566914047 clear_checking: 8 upper_computer
+ SG_ clear_checking : 0|64@1- (1,0) [-9.22337203685478E+018|9.22337203685478E+018] ""  vcu
+
+BO_ 2563035887 steering_ctrl_fb: 8 vcu
+ SG_ steering_ctrl_fb_velocity : 4|16@1- (0.001,0) [-32.768|32.767] "m/s"  upper_computer
+ SG_ steering_ctrl_fb_steering : 20|16@1- (0.01,0) [-327.68|327.67] "°"  upper_computer
+ SG_ steering_ctrl_fb_gear : 0|4@1+ (1,0) [0|15] ""  upper_computer
+ SG_ steering_ctrl_fb_check_bcc : 56|8@1+ (1,0) [0|255] ""  upper_computer
+ SG_ steering_ctrl_fb_alive_cnt : 52|4@1+ (1,0) [0|15] ""  upper_computer
+
+BO_ 2563035856 steering_ctrl_cmd: 8 upper_computer
+ SG_ steering_ctrl_cmd_velocity : 4|16@1- (0.001,0) [-32.768|32.767] "m/s"  vcu
+ SG_ steering_ctrl_cmd_steering : 20|16@1- (0.01,0) [-327.68|327.67] "°"  vcu
+ SG_ steering_ctrl_cmd_gear : 0|4@1+ (1,0) [0|15] ""  vcu
+ SG_ steering_ctrl_cmd_check_bcc : 56|8@1+ (1,0) [0|255] ""  vcu
+ SG_ steering_ctrl_cmd_alive_cnt : 52|4@1+ (1,0) [0|15] ""  vcu
+
+BO_ 2563038703 rear_angle_fb: 8 vcu
+ SG_ rear_angle_fb_check_bcc : 56|8@1+ (1,0) [0|255] ""  upper_computer
+ SG_ rear_angle_fb_alive_cnt : 52|4@1+ (1,0) [0|15] ""  upper_computer
+ SG_ rear_angle_fb_r : 16|16@1- (0.01,0) [-327.68|327.67] "°"  upper_computer
+ SG_ rear_angle_fb_l : 0|16@1- (0.01,0) [-327.68|327.67] "°"  upper_computer
+
+BO_ 2563039983 bms_flag_fb: 8 vcu
+ SG_ bms_flag_fb_charge_flag : 21|1@1+ (1,0) [0|1] ""  upper_computer
+ SG_ bms_flag_fb_lock_mos : 20|1@1+ (1,0) [0|1] ""  upper_computer
+ SG_ bms_flag_fb_ic_error : 19|1@1+ (1,0) [0|1] ""  upper_computer
+ SG_ bms_flag_fb_short : 18|1@1+ (1,0) [0|1] ""  upper_computer
+ SG_ bms_flag_fb_discharge_oc : 17|1@1+ (1,0) [0|1] ""  upper_computer
+ SG_ bms_flag_fb_charge_oc : 16|1@1+ (1,0) [0|1] ""  upper_computer
+ SG_ bms_flag_fb_discharge_ut : 15|1@1+ (1,0) [0|1] ""  upper_computer
+ SG_ bms_flag_fb_discharge_ot : 14|1@1+ (1,0) [0|1] ""  upper_computer
+ SG_ bms_flag_fb_charge_ut : 13|1@1+ (1,0) [0|1] ""  upper_computer
+ SG_ bms_flag_fb_charge_ot : 12|1@1+ (1,0) [0|1] ""  upper_computer
+ SG_ bms_flag_fb_uv : 11|1@1+ (1,0) [0|1] ""  upper_computer
+ SG_ bms_flag_fb_ov : 10|1@1+ (1,0) [0|1] ""  upper_computer
+ SG_ bms_flag_fb_single_uv : 9|1@1+ (1,0) [0|1] ""  upper_computer
+ SG_ bms_flag_fb_single_ov : 8|1@1+ (1,0) [0|1] ""  upper_computer
+ SG_ bms_flag_fb_soc : 0|8@1+ (1,0) [0|255] "%"  upper_computer
+ SG_ bms_flag_fb_low_temperature : 40|12@1- (0.1,0) [-204.8|204.7] "℃"  upper_computer
+ SG_ bms_flag_fb_hight_temperature : 28|12@1- (0.1,0) [-204.8|204.7] "℃"  upper_computer
+ SG_ bms_flag_fb_check_bcc : 56|8@1+ (1,0) [0|255] ""  upper_computer
+ SG_ bms_flag_fb_alive_cnt : 52|4@1+ (1,0) [0|15] ""  upper_computer
+
+BO_ 2563039727 bms_fb: 8 vcu
+ SG_ bms_fb_check_bcc : 56|8@1+ (1,0) [0|255] ""  upper_computer
+ SG_ bms_fb_alive_cnt : 52|4@1+ (1,0) [0|15] ""  upper_computer
+ SG_ bms_fb_remaining_capacity : 32|16@1+ (0.01,0) [0|655.35] "Ah"  upper_computer
+ SG_ bms_fb_voltage : 0|16@1+ (0.01,0) [0|655.35] "V"  upper_computer
+ SG_ bms_fb_current : 16|16@1- (0.01,0) [-327.68|327.67] "A"  upper_computer
+
+BO_ 2563038447 front_angle_fb: 8 vcu
+ SG_ front_angle_fb_check_bcc : 56|8@1+ (1,0) [0|255] ""  upper_computer
+ SG_ front_angle_fb_alive_cnt : 52|4@1+ (1,0) [0|15] ""  upper_computer
+ SG_ front_angle_fb_r : 16|16@1- (0.01,0) [-327.68|327.67] "°"  upper_computer
+ SG_ front_angle_fb_l : 0|16@1- (0.01,0) [-327.68|327.67] "°"  upper_computer
+
+BO_ 2563037679 rf_wheel_fb: 8 vcu
+ SG_ rf_wheel_velocity : 0|16@1- (0.001,0) [-32.768|32.767] "m/s"  upper_computer
+ SG_ rf_wheel_pulse : 16|32@1- (1,0) [-2147483648|2147483647] "pulse"  upper_computer
+ SG_ rf_wheel_check_bcc : 56|8@1+ (1,0) [0|255] ""  upper_computer
+ SG_ rf_wheel_alive_cnt : 52|4@1+ (1,0) [0|15] ""  upper_computer
+
+BO_ 2563037423 rr_wheel_fb: 8 vcu
+ SG_ rr_wheel_velocity : 0|16@1- (0.001,0) [-32.768|32.767] "m/s"  upper_computer
+ SG_ rr_wheel_pulse : 16|32@1- (1,0) [-2147483648|2147483647] "pulse"  upper_computer
+ SG_ rr_wheel_check_bcc : 56|8@1+ (1,0) [0|255] ""  upper_computer
+ SG_ rr_wheel_alive_cnt : 52|4@1+ (1,0) [0|15] ""  upper_computer
+
+BO_ 2563037167 lr_wheel_fb: 8 vcu
+ SG_ lr_wheel_velocity : 0|16@1- (0.001,0) [-32.768|32.767] "m/s"  upper_computer
+ SG_ lr_wheel_pulse : 16|32@1- (1,0) [-2147483648|2147483647] "pulse"  upper_computer
+ SG_ lr_wheel_check_bcc : 56|8@1+ (1,0) [0|255] ""  upper_computer
+ SG_ lr_wheel_alive_cnt : 52|4@1+ (1,0) [0|15] ""  upper_computer
+
+BO_ 2563036911 lf_wheel_fb: 8 vcu
+ SG_ lf_wheel_check_bcc : 56|8@1+ (1,0) [0|255] ""  upper_computer
+ SG_ lf_wheel_alive_cnt : 52|4@1+ (1,0) [0|15] ""  upper_computer
+ SG_ lf_wheel_pulse : 16|32@1- (1,0) [-2147483648|2147483647] "pulse"  upper_computer
+ SG_ lf_wheel_velocity : 0|16@1- (0.001,0) [-32.768|32.767] "m/s"  upper_computer
+
+BO_ 2563037935 io_fb: 8 vcu
+ SG_ io_fb_charger_sign : 43|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ io_fb_charge_station : 42|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ io_fb_joypad_ctrl : 41|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ io_fb_estop : 40|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ io_fb_unlock : 1|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ io_fb_rr_drop_sensor : 37|1@1+ (1,0) [0|1] ""  upper_computer
+ SG_ io_fb_rm_drop_sensor : 36|1@1+ (1,0) [0|1] ""  upper_computer
+ SG_ io_fb_rl_drop_sensor : 35|1@1+ (1,0) [0|1] ""  upper_computer
+ SG_ io_fb_fr_drop_sensor : 34|1@1+ (1,0) [0|1] ""  upper_computer
+ SG_ io_fb_fm_drop_sensor : 33|1@1+ (1,0) [0|1] ""  upper_computer
+ SG_ io_fb_fl_drop_sensor : 32|1@1+ (1,0) [0|1] ""  upper_computer
+ SG_ io_fb_rr_impact_sensor : 29|1@1+ (1,0) [0|1] ""  upper_computer
+ SG_ io_fb_rm_impact_sensor : 28|1@1+ (1,0) [0|1] ""  upper_computer
+ SG_ io_fb_rl_impact_sensor : 27|1@1+ (1,0) [0|1] ""  upper_computer
+ SG_ io_fb_fr_impact_sensor : 26|1@1+ (1,0) [0|1] ""  upper_computer
+ SG_ io_fb_fm_impact_sensor : 25|1@1+ (1,0) [0|1] ""  upper_computer
+ SG_ io_fb_fl_impact_sensor : 24|1@1+ (1,0) [0|1] ""  upper_computer
+ SG_ io_fb_upper_beam_headlamp : 9|1@1+ (1,0) [0|1] ""  upper_computer
+ SG_ io_fb_turn_lamp : 10|2@1+ (1,0) [0|3] ""  upper_computer
+ SG_ io_fb_speaker : 16|1@1+ (1,0) [0|1] ""  upper_computer
+ SG_ io_fb_lower_beam_headlamp : 8|1@1+ (1,0) [0|1] ""  upper_computer
+ SG_ io_fb_fog_lamp : 14|1@1+ (1,0) [0|1] ""  upper_computer
+ SG_ io_fb_lamp_ctrl : 0|1@1+ (1,0) [0|1] ""  upper_computer
+ SG_ io_fb_clearance_lamp : 13|1@1+ (1,0) [0|1] ""  upper_computer
+ SG_ io_fb_check_bcc : 56|8@1+ (1,0) [0|255] ""  upper_computer
+ SG_ io_fb_braking_lamp : 12|1@1+ (1,0) [0|1] ""  upper_computer
+ SG_ io_fb_alive_cnt : 52|4@1+ (1,0) [0|15] ""  upper_computer
+
+BO_ 2563035631 ctrl_fb: 8 vcu
+ SG_ ctrl_fb_x_linear : 4|16@1- (0.001,0) [-32.768|32.767] "m/s"  upper_computer
+ SG_ ctrl_fb_z_angular : 20|16@1- (0.01,0) [-327.68|327.67] "°/s"  upper_computer
+ SG_ ctrl_fb_y_linear : 36|16@1- (0.001,0) [-32.768|32.767] "m/s"  upper_computer
+ SG_ ctrl_fb_gear : 0|4@1+ (1,0) [0|15] ""  upper_computer
+ SG_ ctrl_fb_check_bcc : 56|8@1+ (1,0) [0|255] ""  upper_computer
+ SG_ ctrl_fb_alive_cnt : 52|4@1+ (1,0) [0|15] ""  upper_computer
+
+BO_ 2563037136 io_cmd: 8 upper_computer
+ SG_ io_cmd_unlock : 1|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ io_cmd_speaker : 16|1@1+ (1,0) [0|1] ""  vcu
+ SG_ io_cmd_check_bcc : 56|8@1+ (1,0) [0|255] ""  vcu
+ SG_ io_cmd_alive_cnt : 52|4@1+ (1,0) [0|15] ""  vcu
+ SG_ io_cmd_fog_lamp : 14|1@1+ (1,0) [0|1] ""  vcu
+ SG_ io_cmd_clearance_lamp : 13|1@1+ (1,0) [0|1] ""  vcu
+ SG_ io_cmd_braking_lamp : 12|1@1+ (1,0) [0|1] ""  vcu
+ SG_ io_cmd_turn_lamp : 10|2@1+ (1,0) [0|3] ""  vcu
+ SG_ io_cmd_upper_beam_headlamp : 9|1@1+ (1,0) [0|1] ""  vcu
+ SG_ io_cmd_lower_beam_headlamp : 8|1@1+ (1,0) [0|1] ""  vcu
+ SG_ io_cmd_lamp_ctrl : 0|1@1+ (1,0) [0|1] ""  vcu
+
+BO_ 2563035600 ctrl_cmd: 8 upper_computer
+ SG_ ctrl_cmd_check_bcc : 56|8@1+ (1,0) [0|255] ""  vcu
+ SG_ ctrl_cmd_alive_cnt : 52|4@1+ (1,0) [0|15] ""  vcu
+ SG_ ctrl_cmd_y_linear : 36|16@1- (0.001,0) [-32.768|32.767] "m/s"  vcu
+ SG_ ctrl_cmd_z_angular : 20|16@1- (0.01,0) [-327.68|327.67] "°/s"  vcu
+ SG_ ctrl_cmd_x_linear : 4|16@1- (0.001,0) [-32.768|32.767] "m/s"  vcu
+ SG_ ctrl_cmd_gear : 0|4@1+ (1,0) [0|15] ""  vcu
+
+
+
+CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
+CM_ SG_ 2563037935 io_fb_turn_lamp "0:左右转向灯关闭
+1:左转向灯开启
+1:右转向灯开启
+";
+BA_DEF_ SG_  "GenSigSendType" ENUM  "Cyclic","OnWrite","OnWriteWithRepetition","OnChange","OnChangeWithRepetition","IfActive","IfActiveWithRepetition","NoSigSendType";
+BA_DEF_ SG_  "GenSigInactiveValue" INT 0 0;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 0;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "Cyclic","not_used","not_used","not_used","not_used","Cyclic","not_used","IfActive","NoMsgSendType";
+BA_DEF_ BU_  "NmStationAddress" HEX 0 0;
+BA_DEF_  "DBName" STRING ;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "GenSigSendType" "Cyclic";
+BA_DEF_DEF_  "GenSigInactiveValue" 0;
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenMsgSendType" "NoMsgSendType";
+BA_DEF_DEF_  "NmStationAddress" 0;
+BA_DEF_DEF_  "DBName" "";
+BA_DEF_DEF_  "BusType" "CAN";
+BA_ "BusType" "CAN";
+BA_ "DBName" "chassis_4t4d_can_protocol";
+

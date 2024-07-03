@@ -1,0 +1,3 @@
+yhs_can_control_node:
+  ros__parameters:
+    can_name: "can0"
